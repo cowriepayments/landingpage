@@ -1,0 +1,57 @@
+{{ define "main" }}
+  <section id="cover" class="my-5" >
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-12 d-flex align-items-center">
+					<div>
+						<img src="/assets/img/latest.svg" width="256px">
+						<hr>
+						<h2 class="h2 font-weight-bold reveal" style="color: #4b4a4f;">Digital Payments for Everyone</h2>
+						<p class="text-muted reveal">
+								At Cowrie we are working on making the transfer of funds between consumers and merchants and even among individuals secure, seamless and affordable.
+						</p>
+						<span class="blue-divider my-3 reveal"></span>
+					</div>
+				</div>
+				<div class="col-lg-6 col-12">
+					<div>
+						<img src="/assets/img/secure.svg"  width="100%">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 d-flex align-items-center">
+					<div class="sect">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="h4 font-weight-bold reveal" style="color: #4b4a4f;">Sign up for Early Access</h4>
+								<p class="text-muted reveal">
+									We are currently working on rolling out a sandboxed service limited to transactions towards merchants selected for our early access program.
+									The service will eventually be open to all merchants with a valid business license.
+									Peer to peer transfers will also eventually be introduced as regulations permit and/or catch up.
+								</p>
+								<p class="text-muted reveal">
+									Go ahead and sign up via the form below and we will notify you when we are ready to begin offering access.
+								</p>
+								<form action="https://formspree.io/access@cowrie.io" method="POST">
+									<div class="form-group">
+										<label for="email">Email Address</label>
+										<input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+									</div>
+									<div class="form-group">
+										<label for="type">User Type</label>
+										<select class="form-control" id="type" name="type">
+											<option value="Merchant">Merchant</option>
+											<option value="Individual">Individual</option>
+										</select>
+									</div>
+									<button class="btn btn-primary btn-lg ml-md-2 mt-2 mt-sm-0" style="margin-left: 0 !important;" type="submit">Submit</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{{ end }}

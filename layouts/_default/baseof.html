@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Cowrie</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Cowrie">
+	<link rel="stylesheet" href="/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/main.css">
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/ico" href="/assets/img/favicon.ico" />
+
+	<!-- Theme Color -->
+	<meta name="theme-color" content="#563d7c">
+</head>
+<body>
+	<!-- {{ block "header" . }}
+		{{ partial "nav" . }}
+	{{ end }} -->
+	
+	<div style="min-height: 100vh;">
+			{{ block "main" . }}
+			{{ end }}
+	</div>
+
+	{{ block "footer" . }}
+		{{ partial "footer" . }}
+	{{ end }}
+	
+	<!-- Load Scripts -->
+	<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="/bootstrap/js/bootstrap.min.js"></script> -->
+</body>
