@@ -77,3 +77,7 @@ section .shape{
 .sect {
   padding-top: 3rem;
 }
+
+.recaptcha {
+  margin-bottom: 0.8rem;
+}
