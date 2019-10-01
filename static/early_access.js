@@ -23,9 +23,9 @@ $(document).ready(function () {
     var $form = $(this)
   
     $.post($form.attr("action"), $form.serialize()).then(function(res) {
-      //console.log(res)
-      $parsedRes = $($.parseHTML(res))
-      if ($parsedRes('#early_access')) {
+      var parsedRes = $(res)
+      var err = $('#early_access', parsedRes)
+      if (err) {
         console.log('error')
       }
 
