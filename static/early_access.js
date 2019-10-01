@@ -26,12 +26,14 @@ $(document).ready(function () {
       var parsedRes = $(res)
       var err = $('#early_access', parsedRes)
       if (err) {
-        console.log('error')
+        $('#early_access_response').removeClass(['alert-error', 'alert-success'])
+        $('#early_access_response').addClass('alert-warning')
+        $('#early_access_response').html("Are you sure you're not a robot?")
+      } else {
+        $('#early_access_response').removeClass(['alert-warning', 'alert-error'])
+        $('#early_access_response').addClass('alert-success')
+        $('#early_access_response').html("Thanks for signing up. We appreciate your interest.")
       }
-
-      $('#early_access_response').removeClass(['alert-warning', 'alert-error'])
-      $('#early_access_response').addClass('alert-success')
-      $('#early_access_response').html("Thanks for signing up. We appreciate your interest.")
       $('#early_access_response').show()
     }, function() {
       $('#early_access_response').removeClass(['alert-success', 'alert-warning'])
