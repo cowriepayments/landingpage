@@ -23,11 +23,9 @@ $(document).ready(function () {
     var $form = $(this)
   
     $.post($form.attr("action"), $form.serialize()).then(function(res) {
-      //console.log(res)
       var parsedRes = $(res)
-      var err = parsedRes.find('#early_access')
-      console.log(err)
-      if (err) {
+      var eaform = parsedRes.find('#early_access')
+      if (eaform.length > 0) {
         $('#early_access_response').removeClass(['alert-error', 'alert-success'])
         $('#early_access_response').addClass('alert-warning')
         $('#early_access_response').html("Are you sure you're not a robot?")
