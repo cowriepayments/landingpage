@@ -23,8 +23,9 @@ $(document).ready(function () {
     var $form = $(this)
   
     $.post($form.attr("action"), $form.serialize()).then(function(res) {
+      console.log(res)
       var parsedRes = $(res)
-      var err = $('#early_access', parsedRes)
+      var err = parsedRes.find('#early_access')
       if (err) {
         $('#early_access_response').removeClass(['alert-error', 'alert-success'])
         $('#early_access_response').addClass('alert-warning')
