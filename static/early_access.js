@@ -23,7 +23,12 @@ $(document).ready(function () {
     var $form = $(this)
   
     $.post($form.attr("action"), $form.serialize()).then(function(res) {
-      console.log(res)
+      //console.log(res)
+      $parsedRes = $($.parseHTML(res))
+      if ($parsedRes('#early_access')) {
+        console.log('error')
+      }
+
       $('#early_access_response').removeClass(['alert-warning', 'alert-error'])
       $('#early_access_response').addClass('alert-success')
       $('#early_access_response').html("Thanks for signing up. We appreciate your interest.")
