@@ -20,10 +20,8 @@
     {{ partial "nav" . }}
   {{ end }} -->
   
-  <div style="min-height: 100vh;">
-    {{ block "main" . }}
-    {{ end }}
-  </div>
+  {{ block "main" . }}
+  {{ end }}
 
   {{ block "footer" . }}
     {{ partial "footer" . }}
